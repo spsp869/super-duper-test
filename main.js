@@ -42,3 +42,16 @@ function onPictureInPictureResize() {
 	logs.appendChild(listItem);
 	setTimeout(() => logs.removeChild(listItem), 2000);
 };
+
+
+//
+// const canvas = document.getElementById("canvas");
+// const ctx = canvas.getContext("2d");
+//
+// setInterval(drawClock, 1000);
+//
+// function drawClock() {
+//   drawFace(ctx, radius);
+//   drawNumbers(ctx, radius);
+//   drawTime(ctx, radius);
+// };

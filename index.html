@@ -25,5 +25,37 @@
 			</p>
       <ul id="logs"></ul>
     </div>
+    <div>
+      <canvas id="canvas" width="400" height="400" ></canvas>
+        <script type="text/javascript">
+
+          const canvas = document.getElementById("canvas");
+          const ctx = canvas.getContext("2d");
+
+          setInterval(drawClock, 1000);
+
+          function drawClock() {
+            //drawFace(ctx, radius);
+            //drawNumbers(ctx, radius);
+            //drawTime(ctx, radius);
+          };
+        </script>
+      <!-- HTML --> <!-- 1. canvas 엘리먼트를 선언한다: id, widht, height를 태그 내에서 지정해준다. -->
+       <canvas id="myCanvas" width="400" height="300"></canvas> <!-- Javascript -->
+       <script>
+          // 1. canvas 엘리먼트를 취득한다.
+          const canvas2 = document.getElementById('myCanvas');
+          // 2. 2d모드의 그리기 객체를 취득한다. => 이 객체를 통해 canvas에 그림을 그릴 수 있다.
+          const ctx2 = canvas2.getContext("2d");
+          // 3. 색을 설정한다 => CSS에서 사용가능한 색깔로 지정하면 된다. #000000, black 등
+          ctx2.fillStyle = 'blue';
+          // 4. 파란색 사각형을 그린다 => fillRect(x, y, width, height)
+          ctx2.fillRect(0, 0, 150, 75);
+           // (0, 0)좌표에서 시작하여 가로 150, 세로 75의 사각형을 그린다.
+           const video2 = document.getElementById('video');
+           video2.srcObject = canvas2.captureStream();
+         </script>
+
+    </div>
   </body>
 </html>
